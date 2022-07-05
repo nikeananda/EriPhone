@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Add New Product</title>
+    <style>
+        body{
+            background-color:lightsteelblue;
+            padding-bottom: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="my-3">
+        <div class="container">
+            <h2 class="mt-3 mb-3">
+                <span type="button" class="bi bi-pencil-square"> Add New Product</span>
+            </h2>
+            <form class="my-4" id="form">
+                <div class="row mb-3">
+                    <label for="nama" class="form-label col-sm-4 col-md-3 col-xl-2">Nama *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Produk" required="required">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="seri_id" class="form-label col-sm-4 col-md-3 col-xl-2">Seri *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <select class="form-select" id="seri_id" name="seri_id" required="required">
+                            <option value="" selected>-</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="layar" class="form-label col-sm-4 col-md-3 col-xl-2">Layar *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" step="any" class="form-control" id="layar" required="required" name="layar" placeholder="Layar">
+                            <span class="input-group-text">inch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="ram" class="form-label col-sm-4 col-md-3 col-xl-2">RAM *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="ram" required="required" name="ram" placeholder="RAM">
+                            <span class="input-group-text">GB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-3">
+                    <label for="rom" class="form-label col-sm-4 col-md-3 col-xl-2">ROM *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="rom" required="required" name="rom" placeholder="ROM">
+                            <span class="input-group-text">GB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="kamera_utama" class="form-label col-sm-4 col-md-3 col-xl-2">Kamera Utama *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="kamera_utama" required="required" name="kamera_utama" placeholder="Kamera Utama">
+                            <span class="input-group-text">MP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="kamera_depan" class="form-label col-sm-4 col-md-3 col-xl-2">Kamera Depam *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="kamera_depan" required="required" name="kamera_depan" placeholder="Kamera Depan">
+                            <span class="input-group-text">MP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="baterai" class="form-label col-sm-4 col-md-3 col-xl-2">Baterai *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="baterai" required="required" name="baterai" placeholder="Kapasitas baterai">
+                            <span class="input-group-text">mAh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="warna" class="form-label col-sm-4 col-md-3 col-xl-2">Warna *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <select class="form-select" id="warna" size="4" name="warna[]" multiple="multiple" required="required">
+                            <option>Mint</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                            <option>Peach</option>
+                            <option>Gray</option>
+                            <option>Gold</option>
+                            <option>Violet</option>
+                            <option>White</option>
+                            <option>Green</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="harga" class="form-label col-sm-4 col-md-3 col-xl-2">Harga *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <div class="input-group">
+                            <span class="input-group-text">Rp</span>
+                            <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga" required="required">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="gambar" class="form-label col-sm-4 col-md-3 col-xl-2">URL Gambar *</label>
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <input type="text" class="form-control" name="gambar" id="gambar" placeholder="URL Gambar" required="required">
+                    </div>
+                </div>
+
+                <div class="row mb-3 justify-content-end">
+                    <div class="col-sm-8 col-md-9 col-xl-10">
+                        <button type="submit" class="btn btn-primary">
+                        <span class="bi bi-send-fill" name="submit"></span> Submit</button>
+                        <a href="index.html" class="btn btn-outline-secondary bi bi-arrow-left"> Back</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {                
+            $.get("seri.php", function (response) {
+                $.each(response, function (key, value) {
+                    $('#seri_id').append('<option value="' + value.seri_id + '">' + value.nama_seri + '</option>');
+                });
+            });
+                
+            $('#form').submit(function (event) {
+                event.preventDefault();
+                var data = $('#form').serialize();
+                $.post("hp.php?action=create", data, function (respone) {
+                    alert("Data berhasil ditambahkan");
+                });
+            });
+        });
+    </script>
+</body>
+</html>
